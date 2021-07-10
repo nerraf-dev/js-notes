@@ -52,9 +52,13 @@ header {
     margin: 0 auto;
     
 }
+.todo-center{
+    margin: 1vw auto 0 auto;
+
+}
 
 .todo-form {
-    margin: 0 auto;
+    /* margin: 0 auto; */
     padding: 1vw;
     background-color: blanchedalmond;
     width: 50vw; 
@@ -62,7 +66,7 @@ header {
 }
 
 .todo-items{
-    margin: 1vw auto 0 auto;
+    /* margin: 1vw auto 0 auto; */
     background-color: aquamarine;
     min-width: 1fr;
     width: 50vw;; 
