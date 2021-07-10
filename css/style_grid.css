@@ -1,6 +1,6 @@
 .container-grid {
     display: grid;
-    grid-template-columns: 0.7fr 1.6fr 0.7fr;
+    grid-template-columns: 0.5fr 2fr 0.5fr;
     grid-template-rows: 0.3fr 0.7fr 2.8fr 0.2fr;
     gap: 0px 0px;
     grid-auto-flow: row;
@@ -43,12 +43,29 @@ header {
 /* ********* */
 
 
-
-
-
 .todo-list { 
-    justify-self: center;
     grid-area: todo-list; 
+    justify-self: center;
+    width: 90%; 
+    padding-top: 1vw;
+    background-color: chocolate;
+    margin: 0 auto;
+    
+}
+
+.todo-form {
+    margin: 0 auto;
+    padding: 1vw;
+    background-color: blanchedalmond;
+    width: 50vw; 
+
+}
+
+.todo-items{
+    margin: 1vw auto 0 auto;
+    background-color: aquamarine;
+    min-width: 1fr;
+    width: 50vw;; 
 }
 
 .footer { 
