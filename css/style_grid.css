@@ -1,0 +1,56 @@
+.container-grid {
+    display: grid;
+    grid-template-columns: 0.7fr 1.6fr 0.7fr;
+    grid-template-rows: 0.3fr 0.7fr 2.8fr 0.2fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "nav nav nav"
+      "header header header"
+      ". todo-list ."
+      "footer footer footer";
+  }
+  
+nav{
+    grid-area: nav; 
+    background-color: rgb(26, 54, 212); 
+}
+
+.nav { 
+    height: 5vw;
+}
+
+.nav ul{
+    font-size: 1vw;
+}
+
+
+
+header { 
+    grid-area: header;
+    background-color: blueviolet; 
+}
+
+.header-container{
+    display: flex;
+    justify-content: center;
+}
+
+.header{
+    margin: 0 auto;
+    color: chartreuse;
+}
+/* ********* */
+
+
+
+
+
+.todo-list { 
+    justify-self: center;
+    grid-area: todo-list; 
+}
+
+.footer { 
+    grid-area: footer; 
+}
