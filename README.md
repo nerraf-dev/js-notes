@@ -1,3 +1,3 @@
 # js-notes
 
-something
+something else
