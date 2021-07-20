@@ -40,15 +40,12 @@ function addTodo(item){
 function renderTodos(todos) {
     // clear everything inside <ul> with class=todo-items
     todoItemsList.innerHTML = '';
-  
     // run through each item inside todos
     todos.forEach(function(item) {
       // check if the item is completed
       const checked = item.completed ? 'checked': null;
-  
       // make a <li> element and fill it - <li> </li>
       const li = document.createElement('li');
-      
       //Set <li> class: <li class="item"> </li>
       li.setAttribute('class', 'todo-item');
       
@@ -67,7 +64,7 @@ function renderTodos(todos) {
   
       li.innerHTML = `
         <input type="checkbox" class="todo-checkbox" ${checked}>
-        ${item.name}
+        <span>${item.name}</span>
         <button class="delete-btn far fa-trash-alt"></button>
       `;
       // finally add the <li> to the <ul>
