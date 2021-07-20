@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Notes</title>
+
+    <!-- Normalise browser styles-->
+    <!-- <link rel="stylesheet" href="css/modern-normalize.css"> -->
+    <!-- <link rel="stylesheet" href="css/reset.css"> -->
+    
+    <!-- *** Styles ***  -->
+    <!-- <link rel="stylesheet" href="css/styles.css"> -->
+    <!-- <link rel="stylesheet" href="css/style_grid.css"> -->
+
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.7.0/dist/css/uikit.min.css" />
+
+
+</head>
+<body>
+
+    <header>
+        <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
+            <nav class="uk-navbar-container" uk-navbar>
+                <ul class="uk-navbar-nav">
+                    <li><a href="#">Home</a></li>
+                </ul>
+            </nav>
+        </div>        
+    </header>
+
+    <div class="uk-container uk-container-large" style="background-color: #7fffd4;">
+        <h1 class="uk-align-center">Todo</h1>
+    </div>
+
+    <main>
+        <div class="uk-container uk-container-large" style="background-color: #b2aaf8;">
+            <!-- The form-->
+            <form class="todo-form todo-center">
+                <input type="text" name="todo-input" class="todo-input" placeholder="Add a todo...">
+                <button type="submit" class="add-button">Add</button>
+            </form>
+            <!-- the list-->
+                <ul class="todo-items todo-center">
+    <!-- <li class="item" data-key="1594003133171">  
+                    <input class="checkbox" type="checkbox">
+                    Go to gym 
+                    <button class="delete-button">X</button>
+                </li> -->
+                
+                </ul>
+        </div> 
+    </main>       
+        
+        
+
+        <div class="footer">
+
+        </div>
+    </div>
+
+
+
+    <script type="text/javascript" src="scripts/script.js"></script>
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.7.0/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.7.0/dist/js/uikit-icons.min.js"></script>  
+</body>
+</html>

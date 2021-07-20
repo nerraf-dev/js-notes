@@ -10,52 +10,52 @@
     <link rel="stylesheet" href="css/modern-normalize.css">
     <!-- <link rel="stylesheet" href="css/reset.css"> -->
     
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/47a099eff3.js" crossorigin="anonymous"></script>
+
     <!-- *** Styles ***  -->
-    <!-- <link rel="stylesheet" href="css/styles.css"> -->
     <link rel="stylesheet" href="css/style_grid.css">
 
 </head>
 <body>
-    <div class="container-grid">
-        <nav class="nav-container">
-            <ul class="navbar">
-                <li class="nav-item">
-                    Home
-                </li>
-            </ul>
-        </nav>
-
-        <header class="header-container">
-            <div class="header">
-                <h1 id="header-title">Todo</h1>
-            </div>
-        </header>
-        
-        <main class="todo-list">
+    <div class="site">
+        <header class="site-header">
+            <nav>
+                <div class="logo">Todo</div>
+            </nav>
             
-            <!-- The form-->
-            <form class="todo-form todo-center">
-                <input type="text" name="todo-input" class="todo-input" placeholder="Add a todo...">
-                <button type="submit" class="add-button">Add</button>
-            </form>
-            <!-- the list-->
-                <ul class="todo-items todo-center">
-    <!-- <li class="item" data-key="1594003133171">  
-                    <input class="checkbox" type="checkbox">
-                    Go to gym 
-                    <button class="delete-button">X</button>
-                </li> -->
-                
-                </ul>
+        </header>
+
+        <main class="main">
+            <!-- Todo list app -->
+            <div class="todo-list-app">
+                <h1>Things todo:</h1>
+                <!-- The form-->
+                <form class="todo-form todo-center">
+                    <input type="text" name="todo-input" class="todo-input" placeholder="Add a todo item...">
+                    <button type="button" class="add-button">Add</button>
+                </form>
+
+                <!-- the list-->
+                <div class="todo-list">
+                    <ul class="todo-items todo-center">
+                    <!-- <li class="item" data-key="1594003133171">  
+                            <input class="checkbox" type="checkbox">
+                            <button class="delete-button">X</button>
+                        </li> -->
+                    </ul>
+                </div>
+
+            </div>
+            <!-- End of Todo List -->
         </main>
 
-        <div class="footer">
-
-        </div>
+        <footer class="footer">
+            <div class="footer-text">some footer text</div>
+        </footer>
     </div>
 
-
-
-    <script type="text/javascript" src="scripts/script.js"></script>   
+   
+    <script type="text/javascript" src="scripts/script.js"></script>
 </body>
 </html>

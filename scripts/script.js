@@ -1,3 +1,4 @@
+
 //Select todo form
 const todoForm = document.querySelector('.todo-form');
 // select input box
@@ -9,10 +10,11 @@ const todoItemsList = document.querySelector('.todo-items');
 //array will contain todo objects. the object has id, name, completed
 let todos = [];
 
-// add eventlistener to the form
-todoForm.addEventListener('submit', function(event){
+// add eventlistener to the form - listen for submit action. 
+// **Could this be click? Would it prevent need to add the reload blocking part?
+todoForm.addEventListener('click', function(event){
     //Prevent page from reloading on submit
-    event.preventDefault();
+    // event.preventDefault();
     addTodo(todoInput.value); // call addTodo function with input box current value
 });
 
@@ -44,13 +46,15 @@ function renderTodos(todos) {
       // check if the item is completed
       const checked = item.completed ? 'checked': null;
   
-      // make a <li> element and fill it
-      // <li> </li>
+      // make a <li> element and fill it - <li> </li>
       const li = document.createElement('li');
-      // <li class="item"> </li>
-      li.setAttribute('class', 'item');
-      // <li class="item" data-key="20200708"> </li>
+      
+      //Set <li> class: <li class="item"> </li>
+      li.setAttribute('class', 'todo-item');
+      
+      // Set the LI attribute to be the ID (date stamp) <li class="item" data-key="20200708"> </li>
       li.setAttribute('data-key', item.id);
+      
       /* <li class="item" data-key="20200708"> 
             <input type="checkbox" class="checkbox">
             Go to Gym
@@ -62,9 +66,9 @@ function renderTodos(todos) {
       }
   
       li.innerHTML = `
-        <input type="checkbox" class="checkbox" ${checked}>
+        <input type="checkbox" class="todo-checkbox" ${checked}>
         ${item.name}
-        <button class="delete-button">X</button>
+        <button class="delete-btn far fa-trash-alt"></button>
       `;
       // finally add the <li> to the <ul>
       todoItemsList.append(li);
@@ -129,7 +133,7 @@ function renderTodos(todos) {
           completeToggle(event.target.parentElement.getAttribute('data-key'));
       }
 
-      if(event.target.classList.contains('delete-button')){
+      if(event.target.classList.contains('delete-btn')){
           //get id from data-key or parent <li> 
           deleteTodo(event.target.parentElement.getAttribute('data-key'));
       }
