@@ -7,22 +7,21 @@ const todoInput = document.querySelector('.todo-input');
 const todoItemsList = document.querySelector('.todo-items');
 
 //Array to store the todo items
-//array will contain todo objects. the object has id, name, completed
+//array will contain todo objects. the object has id, name, completed (see below! *1)
 let todos = [];
 
-// add eventlistener to the form - listen for submit action. 
-// **Could this be click? Would it prevent need to add the reload blocking part?
+// add eventlistener to the form - listen for click. 
 todoForm.addEventListener('click', function(event){
     //Prevent page from reloading on submit
     // event.preventDefault();
     addTodo(todoInput.value); // call addTodo function with input box current value
 });
 
-// Add Todo to list
+// Add Todo item to list
 function addTodo(item){
     //if item is not empty (can't add empty item!)
     if (item !== ''){
-        //make todo object
+        //make todo object - (*1)
         const todo = {
             id: Date.now(),
             name: item,
@@ -31,7 +30,6 @@ function addTodo(item){
     //Add to array
     todos.push(todo);
     addToLocalStorage(todos);
-
     todoInput.value = '';
     }
 }
@@ -59,13 +57,13 @@ function renderTodos(todos) {
           </li> */
       // if item is completed, then add a class to <li> called 'checked', which will add line-through style
       if (item.completed === true) {
-        li.classList.add('checked');
+        li.classList.add('todo-checked');
       }
   
       li.innerHTML = `
-        <input type="checkbox" class="todo-checkbox" ${checked}>
-        <span>${item.name}</span>
-        <button class="delete-btn far fa-trash-alt"></button>
+            <input type="checkbox" class="todo-checkbox" ${checked}>
+            <span class="todo-item-text">${item.name}</span>
+            <button class="todo-delete-btn far fa-trash-alt"></button>
       `;
       // finally add the <li> to the <ul>
       todoItemsList.append(li);
@@ -130,8 +128,8 @@ function renderTodos(todos) {
           completeToggle(event.target.parentElement.getAttribute('data-key'));
       }
 
-      if(event.target.classList.contains('delete-btn')){
+      if(event.target.classList.contains('todo-delete-btn')){
           //get id from data-key or parent <li> 
-          deleteTodo(event.target.parentElement.getAttribute('data-key'));
+            deleteTodo(event.target.parentElement.getAttribute('data-key'));        
       }
   });

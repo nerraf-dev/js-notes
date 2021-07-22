@@ -1,25 +1,24 @@
+@import url("styles_responsive_menu.css");
 * {
+    box-sizing: border-box;
     padding: 0;
     margin: 0; 
   }
-
+body {
+    font-family: sans-serif;
+    font-size: 16px;
+}
 .site {
     width: 100vw;
+    /* min-height: 100vw; */
     display: grid;
+    grid-template-rows: 60px auto 45px;
     grid-template-areas: 
         "header"
         "main"
         "footer";
 }
-/* @media all and (min-width: 700px) {
-    .site {
-        display: grid;
-        grid-template-areas: 
-            "header header"
-            "main   main"
-            "footer footer";
-    }
-} */
+/* --- MAIN LAYOUT --- */
 
 .site > header {
     grid-area: header;
@@ -36,13 +35,16 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0 0.5vw;
+    margin: 0.5vw 0.5vw;
 }
 .todo-list-app ul {
     list-style-type: none;
     /* justify-content: left; */
 }
 /* Mobile */
+.todo-form {
+    padding-top: 15px;
+}
 .todo-list {
     /* width: 100vw; */
     /* width:max-content; */
@@ -52,23 +54,29 @@
     padding: 1vw;
     /* box-sizing: border-box; */
 }
-
 /* each li with class="item" */
 .todo-item {
     display: flex;
     flex-direction: row;
-    /* justify-content: start; */
     /* min-width: 25vw; */
     max-width: 90vw;;
     background-color: rgb(228, 228, 228);
     padding: 0.5vw;
     font-size: 1.1rem;
   }
-  .todo-checkbox {
+.todo-item:first-child {
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+}
+.todo-item:last-child {
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
+.todo-checkbox {
     margin-right: 10px;
-  }
-  .todo-item-text {
-      flex-grow: 1;
+}
+.todo-item-text {
+    flex-grow: 1;
       /*  overflow settings for long items
      - prevent any wrapping
      - hide the overflow
@@ -77,12 +85,11 @@
     overflow: hidden;
     text-overflow: ellipsis;
     /* word-wrap: break-word; */  
-  }
-  .todo-delete {
+}
+.todo-delete {
 
-  }
-  
-  .delete-btn {
+}
+.todo-delete-btn {
     float: right;
     border: none;
     outline: none;
@@ -91,21 +98,20 @@
     margin-left: 10px;
     /* color: #050505; */
     background-color:transparent;
-  }
-  
+}
   /* applied when the todo item is checked */
-  .checked { 
+.todo-checked { 
     text-decoration: line-through;
     color: #63626275;
-  }
-
-
-.site-header nav {
-    background-color: blueviolet;
 }
 
 .footer {
     grid-column-start: 1;
     grid-column-end: 4;
     background-color: rgb(247, 147, 172);
+    height: 45px;
+    position:fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
 }
