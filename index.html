@@ -7,45 +7,59 @@
     <title>JS Notes</title>
 
     <!-- Normalise browser styles-->
-    <link rel="stylesheet" href="css/modern-normalize.css">
-    <!-- <link rel="stylesheet" href="css/reset.css"> -->
+    <!-- <link rel="stylesheet" href="css/modern-normalize.css"> -->
     
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/47a099eff3.js" crossorigin="anonymous"></script>
 
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
     <!-- *** Styles ***  -->
-    <link rel="stylesheet" href="css/style_grid.css">
+    <link rel="stylesheet" href="css/todo-all-styles.css">
 
 </head>
 <body>
+    <header class="site-header">
+    <nav>
+        <ul class="nav-menu">
+            <li class="logo"><a href="#">Todo</a></li>
+            <li class="item"><a href="#">Home</a></li>
+            <!-- <li class="item has-submenu">
+                <a tabindex="0" href="#">Dropdown</a>
+                <ul class="submenu">
+                    <li class="subitem"><a href="#">Link</a></li>
+                    <li class="subitem"><a href="#">Link</a></li>
+                    <li class="subitem"><a href="#">Link</a></li>
+                </ul>
+            </li> -->
+            <!-- <li class="item button"><a href="#">Log In</a></li>
+            <li class="item button secondary"><a href="#">Sign Up</a></li> -->
+            <li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
+        </ul>
+    </nav>
+    </header>
     <div class="site">
-        <header class="site-header">
-            <nav>
-                <div class="logo">Todo</div>
-            </nav>
-            
-        </header>
 
         <main class="main">
             <!-- Todo list app -->
             <div class="todo-list-app">
                 <h1>Things todo:</h1>
                 <!-- The form-->
-                <form class="todo-form todo-center">
+                <form class="todo-form">
                     <input type="text" name="todo-input" class="todo-input" placeholder="Add a todo item...">
                     <button type="button" class="add-button">Add</button>
                 </form>
 
                 <!-- the list-->
                 <div class="todo-list">
-                    <ul class="todo-items todo-center">
+                    <ul class="todo-items">
                     <!-- <li class="item" data-key="1594003133171">  
                             <input class="checkbox" type="checkbox">
                             <button class="delete-button">X</button>
                         </li> -->
                     </ul>
-                </div>
-
+                </div>                
             </div>
             <!-- End of Todo List -->
         </main>
@@ -55,7 +69,7 @@
         </footer>
     </div>
 
-   
+    <script type="text/javascript" src="scripts/responsive_menu.js"></script>
     <script type="text/javascript" src="scripts/script.js"></script>
 </body>
 </html>
