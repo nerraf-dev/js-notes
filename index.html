@@ -39,16 +39,21 @@
         </ul>
     </nav>
     </header>
-    <div class="site">
-
-        <main class="main">
+    <div class="main-container">
+        <main>
             <!-- Todo list app -->
             <div class="todo-list-app">
                 <h1>Things todo:</h1>
                 <!-- The form-->
                 <form class="todo-form">
-                    <input type="text" name="todo-input" class="todo-input" placeholder="Add a todo item...">
-                    <button type="button" class="add-button">Add</button>
+                    <input type="text" name="todo-input-text" class="todo-input-text" placeholder="Add a todo item..." size="30">
+                    <!-- <select name="priority" class="todo-priority">
+                        <option value="Low" data-icon="fas fa-exclamation-circle">Low</option>
+                        <option value="Moderate">Moderate</option>
+                        <option value="High">High</option>
+                    </select> -->
+                    <button type="button" class="todo-add-btn far fa-plus-square" name="add"></button>
+                    
                 </form>
 
                 <!-- the list-->
@@ -64,8 +69,10 @@
             <!-- End of Todo List -->
         </main>
 
-        <footer class="footer">
-            <div class="footer-text">some footer text</div>
+        <footer>
+            <div class="footer-text">
+                Footer
+            </div>
         </footer>
     </div>
 

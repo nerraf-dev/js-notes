@@ -1,8 +1,9 @@
 
 //Select todo form
-const todoForm = document.querySelector('.todo-form');
+// const todoForm = document.querySelector('.todo-form');
+const todoForm = document.querySelector('.todo-add-btn');
 // select input box
-const todoInput = document.querySelector('.todo-input');
+const todoInputText = document.querySelector('.todo-input-text');
 // select ul
 const todoItemsList = document.querySelector('.todo-items');
 
@@ -14,7 +15,7 @@ let todos = [];
 todoForm.addEventListener('click', function(event){
     //Prevent page from reloading on submit
     // event.preventDefault();
-    addTodo(todoInput.value); // call addTodo function with input box current value
+    addTodo(todoInputText.value.trim()); // call addTodo function with input box current value
 });
 
 // Add Todo item to list
@@ -30,7 +31,7 @@ function addTodo(item){
     //Add to array
     todos.push(todo);
     addToLocalStorage(todos);
-    todoInput.value = '';
+    todoInputText.value = '';
     }
 }
 
